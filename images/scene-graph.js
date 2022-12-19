@@ -114,7 +114,7 @@ function visualizeit1(item){
   renderSceneGraph(svg_ref, item.ref_tups);
   // THIRD PANEL
   // candidate caption
-  d3.select("#caption-aud").attr("src", "/images/"+item_index.toString()+".wav");
+  d3.select("#caption-aud").attr("src", "images/"+item_index.toString()+".wav");
   var ply = document.getElementById("player");
   ply.load()
   d3.select("#candidate-caption").text("\"" + item.test_caps + "\"");
@@ -163,10 +163,10 @@ function visualizeit2(item){
 }
 
 item_index = 0;
-d3.json("/images/baseline_small_spice_examples.json", function(error, json) {
+d3.json("images/baseline_small_spice_examples.json", function(error, json) {
   if (error) return console.warn(error);
   data1 = json;
-  d3.json("/images/baseline_small_spicep_examples.json", function(error, json) {
+  d3.json("images/baseline_small_spicep_examples.json", function(error, json) {
     if (error) return console.warn(error);
     data2 = json;
     step(0);
@@ -222,6 +222,6 @@ function step(distance){
     if (i==0) continue;
     var next_index = get_index(item_index, i);
     var aud = new Audio();
-    aud.src = "/images/"+next_index.toString()+".wav";
+    aud.src = "images/"+next_index.toString()+".wav";
   }
 };
