@@ -1,0 +1,70 @@
+{% include base_path %}
+
+<div class="row">
+  <div class="text-center" style="padding-bottom: 9px;">
+    <button class="btn btn--info btn-lg pull-left" onclick="step(-1)">Previous Example</button>
+    <!--span id="image-title"></span-->
+    <button class="btn btn--info btn-lg pull-right" onclick="step(1)">Next Example</button>
+  </div>
+</div>
+<div style="clear: both;">
+  <div style="width: 60%; float: left;">
+    <h4>Reference captions</h4>
+    <div id="ref-panel"></div>
+  </div>
+  <div style="width: 40%; float: left;">
+    <h4>Candidate caption & Audio</h4>
+    <audio id="player" controls><source id="caption-aud" preload="none" src="/images/0.wav" type="audio/wav"></audio> 
+    <p id="candidate-caption"></p>
+  </div>
+  
+  <div style="width: 50%; float: left;">
+  <h3>SPICE</h3>
+  <div style="width: 60%; float: left;">
+    <h4>Reference annotations (1 shown)</h4>
+    <div id="ref-anns1"></div>
+  </div>
+  <div style="width: 40%; float: left;">
+    <h4>Candidate annotations</h4>
+    <div id="test-anns1"></div>
+  </div>
+  <div style="width: 60%; float: left;">
+    <h4>Reference scene graph</h4>
+    <div id="reference1"></div>
+  </div>
+  <div style="width: 40%; float: left;">
+    <h4>Candidate scene graph</h4>
+    <div>
+      <div id="candidate1"></div>
+      <p id="candidate-scores1"></p>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+  </div>
+  
+  
+  <div style="width: 50%; float: left;">
+  <h3>SPICE+ with embedding comparison</h3>
+  <div style="width: 60%; float: left;">
+    <h4>Reference annotations (1 shown)</h4>
+    <div id="ref-anns2"></div>
+  </div>
+  <div style="width: 40%; float: left;">
+    <h4>Candidate annotations</h4>
+    <div id="test-anns2"></div>
+  </div>
+  <div style="width: 60%; float: left;">
+    <h4>Reference scene graph</h4>
+    <div id="reference2"></div>
+  </div>
+  <div style="width: 40%; float: left;">
+    <h4>Candidate scene graph</h4>
+    <div>
+      <div id="candidate2"></div>
+      <p id="candidate-scores2"></p>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+  </div>
+</div>
+<script src="{{ site.url }}{{ site.baseurl }}/images/scene-graph.js"></script>
